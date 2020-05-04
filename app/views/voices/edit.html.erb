@@ -11,16 +11,6 @@
 
     <h2>いまなにしてる？</h2>
     <%= form_with(model: @voice, local: true) do |form| %>
-      <% if @voice.errors.any? %>
-        <div id="error_explanation">
-          <h2><%= @voice.errors.count %>件のエラーがあります。</h2>
-          <ul>
-          <% @voice.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
-          <% end %>
-          </ul>
-        </div>
-      <% end %>
       <div class="voice_content">
         <%= form.label :"つぶやき" %>
         <%= form.text_field :content %>

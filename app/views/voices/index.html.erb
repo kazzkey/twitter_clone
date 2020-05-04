@@ -15,9 +15,13 @@
     <% @voice.each do |voice| %>
       <tr>
         <td><%= voice.content %></td>
+        <!-- <td><%= link_to '編集', voice_path(voice.id) %></td>
+        <td><%= link_to '削除', voice_path(voice.id) %></td> -->
       </tr>
     <% end %>
     </table>
+    <br>
+    <%= link_to '新規作成', new_voice_path %>
   </body>
   <footer></footer>
 </html>

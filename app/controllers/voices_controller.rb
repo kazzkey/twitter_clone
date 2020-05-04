@@ -6,9 +6,16 @@ class VoicesController < ApplicationController
     @voice = Voice.new
   end
   def create
-    Voice.create(voice_params)
-    redirect_to new_voice_path
+    @voice = Voice.new(voice_params)
+    if @voice.save
+      redirect_to voices_path
+    else
+      render :new
+    end
   end
+  # def edit
+  #   @voice = Voice.find(params[:id])
+  # end
   private
   def voice_params
     params.require(:voice).permit(:content)
