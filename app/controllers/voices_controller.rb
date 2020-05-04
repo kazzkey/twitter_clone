@@ -1,4 +1,5 @@
 class VoicesController < ApplicationController
+  before_action :set_voice, only: [:edit, :update, :destroy]
   def index
     @voice = Voice.all
   end
@@ -13,11 +14,24 @@ class VoicesController < ApplicationController
       render :new
     end
   end
-  # def edit
-  #   @voice = Voice.find(params[:id])
-  # end
+  def edit
+  end
+  def update
+    if @voice.update(voice_params)
+      redirect_to voices_path, notice:"編集しました！"
+    else
+      render :edit
+    end
+  end
+  def destroy
+    @voice.destroy
+    redirect_to voices_path, notice:"削除しました！"
+  end
   private
   def voice_params
     params.require(:voice).permit(:content)
+  end
+  def set_voice
+    @voice = Voice.find(params[:id])
   end
 end

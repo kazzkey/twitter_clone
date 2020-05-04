@@ -8,28 +8,8 @@
 
   </header>
   <body>
-
     <h2>いまなにしてる？</h2>
-    <%= form_with(model: @voice, local: true) do |form| %>
-      <% if @voice.errors.any? %>
-        <div id="error_explanation">
-          <h2><%= @voice.errors.count %>件のエラーがあります。</h2>
-          <ul>
-          <% @voice.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
-          <% end %>
-          </ul>
-        </div>
-      <% end %>
-      <div class="voice_content">
-        <%= form.label :"つぶやき" %>
-        <%= form.text_field :content %>
-      </div>
-      <br>
-      <%= form.submit %>
-      <br>
-      <%= link_to '一覧に戻る', voices_path %>
-    <% end %>
+    <%= render 'form' %>
   </body>
   <footer></footer>
 </html>

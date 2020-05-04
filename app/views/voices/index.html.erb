@@ -15,8 +15,8 @@
     <% @voice.each do |voice| %>
       <tr>
         <td><%= voice.content %></td>
-        <!-- <td><%= link_to '編集', voice_path(voice.id) %></td>
-        <td><%= link_to '削除', voice_path(voice.id) %></td> -->
+        <td><%= link_to '編集', edit_voice_path(voice.id) %></td>
+        <td><%= link_to '削除', voice_path(voice.id), method: :delete %></td>
       </tr>
     <% end %>
     </table>
