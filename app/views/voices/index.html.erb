@@ -1,2 +1,23 @@
-<h1>Voices#index</h1>
-<p>Find me in app/views/voices/index.html.erb</p>
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>TSUBUYAKEY</title>
+  </head>
+  <header>
+    <h1>ホーム</h1>
+  </header>
+  <body>
+    <table>
+      <tr>
+        <th>content</th>
+      </tr>
+    <% @voice.each do |voice| %>
+      <tr>
+        <td><%= voice.content %></td>
+      </tr>
+    <% end %>
+    </table>
+  </body>
+  <footer></footer>
+</html>

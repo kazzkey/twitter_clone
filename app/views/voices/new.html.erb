@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>TSUBUYAKEY</title>
+  </head>
+  <header>
+
+  </header>
+  <body>
+
+    <h2>いまなにしてる？</h2>
+    <%= form_with(model: @voice, local: true) do |form| %>
+      <div class="voice_content">
+        <%= form.label :"つぶやき" %>
+        <%= form.text_field :content %>
+      </div>
+      <br>
+      <%= form.submit %>
+      <br>
+      <%= link_to '一覧に戻る', voices_path %>
+    <% end %>
+  </body>
+  <footer></footer>
+</html>
