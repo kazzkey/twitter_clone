@@ -1,4 +1,4 @@
-<%= form_with(model: @voice, local: true) do |form| %>
+<%= form_with(model: @voice, local: true, url: confirm_voices_path) do |form| %>
   <% if @voice.errors.any? %>
     <div id="error_explanation">
       <h2><%= @voice.errors.count %>件のエラーがあります。</h2>

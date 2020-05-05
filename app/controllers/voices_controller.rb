@@ -9,10 +9,13 @@ class VoicesController < ApplicationController
   def create
     @voice = Voice.new(voice_params)
     if @voice.save
-      redirect_to voices_path
+      redirect_to voices_path, notice:"新規作成しました！"
     else
       render :new
     end
+  end
+  def confirm
+    @voice = Voice.new(voice_params)
   end
   def edit
   end
