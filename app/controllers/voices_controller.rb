@@ -20,7 +20,7 @@ class VoicesController < ApplicationController
   end
   def confirm
     @voice = Voice.new(voice_params)
-    
+    render :new if @voice.invalid?
   end
   def edit
   end
