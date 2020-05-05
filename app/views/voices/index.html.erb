@@ -4,25 +4,35 @@
     <meta charset="utf-8">
     <title>TSUBUYAKEY</title>
   </head>
-  <header>
-    <h1>ホーム</h1>
-  </header>
   <body>
-    <table>
-      <tr>
-        <p><%= notice %></p>
-        <th>content</th>
-      </tr>
-    <% @voice.each do |voice| %>
-      <tr>
-        <td><%= voice.content %></td>
-        <td><%= link_to '編集', edit_voice_path(voice.id) %></td>
-        <td><%= link_to '削除', voice_path(voice.id), method: :delete %></td>
-      </tr>
-    <% end %>
-    </table>
-    <br>
-    <%= link_to '新規作成', new_voice_path %>
+    <div class="container">
+      <header class="header clearfix">
+        <div class="logo-image">
+          <a href="/voices"><%= image_tag 'logo.png' %></a>
+        </div>
+      </header>
+      <article class="contents">
+        <h1>Home</h1>
+        <p><%= link_to '新規作成', new_voice_path %></p>
+        <div class="content">
+          <p><%= notice %></p>
+          <p>【つぶやき】</p>
+          <table class="content-table">
+          <% @voice.each do |voice| %>
+            <tr>
+              <td><%= voice.content %></td>
+              <td><%= link_to '編集', edit_voice_path(voice.id) %></td>
+              <td><%= link_to '削除', voice_path(voice.id),
+                      method: :delete, data: {confirm: '削除しますか？' } %></td>
+            </tr>
+          <% end %>
+          </table>
+        </div>
+      </article>
+      <footer class="footer">
+        <p>Tsubuyakey</p>
+        <p>Copyright © 2020 Tsubuyakey All RIGHTS RESERVED.</p>
+      </footer>
+    </div>
   </body>
-  <footer></footer>
 </html>

@@ -1,7 +1,32 @@
-<h3>以下の内容で、送信する。</h3>
-<%= form_with(model: @voice, url: voices_path, local: true) do |form| %>
-  <%= form.hidden_field :content %>
-  <p>本文:<%= @voice.content %></p>
-  <%= form.submit "送信" %>
-  <%= form.submit "戻る", name: 'back' %>
-<% end %>
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>TSUBUYAKEY</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header clearfix">
+        <div class="logo-image">
+          <a href="/voices"><%= image_tag 'logo.png' %></a>
+        </div>
+      </header>
+      <article class="contents">
+        <h1>Edit</h1>
+        <%= form_with(model: @voice, url: voices_path, local: true) do |form| %>
+          <%= form.hidden_field :content %>
+          <p>本文:</p>
+          <p><%= @voice.content %></p><br>
+          <div class="voice_submit">
+            <%= form.submit "送信" %>
+            <%= form.submit "戻る", name: 'back' %>
+          </div>
+        <% end %>
+      </article>
+      <footer class="footer">
+        <p>Tsubuyakey</p>
+        <p>Copyright © 2020 Tsubuyakey All RIGHTS RESERVED.</p>
+      </footer>
+    </div>
+  </body>
+</html>

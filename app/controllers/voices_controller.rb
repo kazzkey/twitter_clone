@@ -23,6 +23,7 @@ class VoicesController < ApplicationController
     render :new if @voice.invalid?
   end
   def edit
+    
   end
   def update
     if @voice.update(voice_params)

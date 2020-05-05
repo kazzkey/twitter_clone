@@ -9,12 +9,15 @@
       </ul>
     </div>
   <% end %>
+  <br>
   <div class="voice_content">
-    <%= form.label :"つぶやき" %>
+    <%= form.label :"つぶやき(140字以内)" %><br>
     <%= form.text_field :content %>
   </div>
   <br>
-  <%= form.submit "送信"%>
-  <br>
+  <div class="voice_submit">
+    <%= form.submit "送信"%>
+  </div>
+  <br><br><br>
   <%= link_to '一覧に戻る', voices_path %>
 <% end %>

@@ -4,12 +4,21 @@
     <meta charset="utf-8">
     <title>TSUBUYAKEY</title>
   </head>
-  <header>
-
-  </header>
   <body>
-    <h2>いまなにしてる？</h2>
-    <%= render 'form' %>
+    <div class="container">
+      <header class="header clearfix">
+        <div class="logo-image">
+          <a href="/voices"><%= image_tag 'logo.png' %></a>
+        </div>
+      </header>
+      <article class="contents">
+        <h1>Now</h1>
+        <%= render 'form' %>
+      </article>
+      <footer class="footer">
+        <p>Tsubuyakey</p>
+        <p>Copyright © 2020 Tsubuyakey All RIGHTS RESERVED.</p>
+      </footer>
+    </div>
   </body>
-  <footer></footer>
 </html>

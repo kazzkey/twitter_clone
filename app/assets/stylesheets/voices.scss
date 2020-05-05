@@ -1,3 +1,98 @@
 // Place all the styles related to the voices controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+html {
+  position: relative;
+  font-size: 80%;
+  height: 100%;
+  width: 100%;
+}
+body {
+  height: 100%;
+}
+.container{
+  margin: 0 auto;
+  min-height: 100%;
+  position: relative;
+}
+.header {
+  background-color: #00ACEE;
+  height: 100px;
+  font-size: 1.5rem;
+}
+.logo-image {
+  width: 100px;
+  float: left;
+  margin: 0 auto;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.contents{
+  width: 100%;
+  margin-left:20px;
+  float: left;
+  font-size: 1.5rem;
+}
+.contents a {
+  text-decoration: none;
+  color: #fff;
+  background-color: #00ACEE;
+  padding: 4px;
+  margin-right: 20px;
+  border: solid 1px #00ACEE;
+  border-radius: 0.5rem;
+}
+.contents a:hover {
+  opacity: 0.6;
+}
+.content {
+  height: 400px;
+  padding: 20px;
+  overflow: scroll;
+  line-height: 2;
+}
+.contents h1 {
+  color: #00ACEE;
+  border-bottom: solid 1px;
+}
+table {
+  border: solid 1px #00ACEE;
+  border-radius: 0.5rem;
+  padding: 20px;
+}
+.content-table a {
+  margin-left: auto;
+}
+input#voice_content {
+  border: solid 1px #00ACEE;
+  border-radius: 0.5rem;
+  padding: 50px 100px;
+  text-align: left;
+}
+.voice_submit input {
+  font-size: 20px;
+  color: #fff;
+  background-color: #00ACEE;
+  padding: 5px 20px;
+  margin-right: 20px;
+  border: solid 1px #00ACEE;
+  border-radius: 0.5rem;
+}
+.footer{
+  background-color: #00ACEE;
+  height: 100px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: table;
+}
+.footer p {
+  font-size: 1rem;
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+}
