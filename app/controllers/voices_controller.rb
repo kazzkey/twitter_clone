@@ -1,7 +1,7 @@
 class VoicesController < ApplicationController
   before_action :set_voice, only: [:edit, :update, :destroy]
   def index
-    @voice = Voice.all
+    @voices = Voice.all
   end
   def new
     @voice = Voice.new
@@ -23,7 +23,7 @@ class VoicesController < ApplicationController
     render :new if @voice.invalid?
   end
   def edit
-    
+
   end
   def update
     if @voice.update(voice_params)

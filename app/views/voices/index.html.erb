@@ -18,7 +18,7 @@
           <p><%= notice %></p>
           <p>【つぶやき】</p>
           <table class="content-table">
-          <% @voice.each do |voice| %>
+          <% @voices.each do |voice| %>
             <tr>
               <td><%= voice.content %></td>
               <td><%= link_to '編集', edit_voice_path(voice.id) %></td>
